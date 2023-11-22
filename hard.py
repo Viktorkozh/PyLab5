@@ -11,16 +11,17 @@ if __name__ == '__main__':
     x = float(input("Введите значение x: "))
     n = int(input("Введите значение n: "))
     if n < 0:
-        print("Illegal value of x", file=sys.stderr)
+        print("Illegal value of n", file=sys.stderr)
         exit(1)
 
-    ans = x
+    ans = 1/math.factorial(n)
     term = ans
+    k = 0
 
     while math.fabs(term) > 10*math.exp(-10):
-        term *= -x**2*(2*n+1)/((2*n+3)**2*(2*n+2))
+        term *= (x**2/4)/((k+1)*(k+n+1))
         ans += term
-        n += 1
+        k += 1
 
     result = ((x / 2) ** n) * ans
 
