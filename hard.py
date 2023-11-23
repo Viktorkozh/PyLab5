@@ -20,7 +20,7 @@ if __name__ == '__main__':
     ans = 1/math.factorial(n)
     term = ans
 
-    while math.fabs(term) > 10**(-10):
+    while math.fabs(term) > 1e-10:
         term *= (x**2/4)/((k+1)*(k+n+1))
         ans += term
         k += 1
