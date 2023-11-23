@@ -1,5 +1,5 @@
-#!/usr/bin/env python3 
-#coding: utf-8 -*-
+#!/usr/bin/env python3
+# coding: utf-8 -*-
 
 import math
 import sys
@@ -17,5 +17,5 @@ if __name__ == '__main__':
         x = (x + a / x) / 2
         if math.fabs(x - xp) < eps:
             break
-    
+
     print(f"x = {x}\nx = {math.sqrt(a)}")
