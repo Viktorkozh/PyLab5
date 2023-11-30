@@ -7,6 +7,7 @@ import math
 
 ans = 0
 k = 0
+eps = 1e-10
 
 
 if __name__ == '__main__':
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     ans = 1/math.factorial(n)
     term = ans
 
-    while math.fabs(term) > 1e-10:
+    while math.fabs(term) > eps:
         term *= (x**2/4)/((k+1)*(k+n+1))
         ans += term
         k += 1
